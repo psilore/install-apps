@@ -27,3 +27,4 @@ jobs:
       run: |
         source /home/runner/.shrc
         which pnpm
+        pnpm -v
