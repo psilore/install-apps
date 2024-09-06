@@ -21,4 +21,4 @@ jobs:
 
     - name: Install apps from source with script
       run: |
-        wget -qO- https://get.pnpm.io/install.sh | sh -
+        wget -qO- https://get.pnpm.io/install.sh | ENV="$HOME/.shrc" SHELL="$(which sh)" sh -
