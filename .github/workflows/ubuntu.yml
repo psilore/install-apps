@@ -25,4 +25,5 @@ jobs:
 
     - name: Which pnpm
       run: |
+        source /home/runner/.shrc
         which pnpm
