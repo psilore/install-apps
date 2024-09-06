@@ -1,0 +1,24 @@
+name: Ubuntu
+
+on: workflow_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Install apps from source
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y \
+          curl \
+          git \
+          jq \
+          make \
+          unzip
+
+    - name: Install apps from source with script
+      run: |
+        wget -qO- https://get.pnpm.io/install.sh | sh -
